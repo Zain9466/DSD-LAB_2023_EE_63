@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Feb  5 11:00:14 2025
+# Process ID: 13236
+# Current directory: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1852 E:\Semester 4\DSD LAB\Experiment 2\Experiment_3\Experiment_3.xpr
+# Log file: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/vivado.log
+# Journal file: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2338] Canceling the changes to the IP catalog. Reverting the catalog back to its previous state.
+INFO: [update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Feb  5 11:02:42 2025...
+ cancelled
+launch_runs synth_1 -jobs 2
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+ERROR: [Common 17-53] User Exception: Unable to launch Synthesis run. No Verilog or VHDL sources found in project
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Feb  5 11:03:48 2025...

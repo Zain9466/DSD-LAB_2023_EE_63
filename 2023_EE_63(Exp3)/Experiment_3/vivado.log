@@ -1,0 +1,138 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Feb  5 18:25:12 2025
+# Process ID: 11628
+# Current directory: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7260 E:\Semester 4\DSD LAB\Experiment 2\Experiment_3\Experiment_3.xpr
+# Log file: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/vivado.log
+# Journal file: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 872.883 ; gain = 233.277
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: Experiment_3
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1385.379 ; gain = 226.008
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Experiment_3' [E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.srcs/sources_1/new/Experiment_3.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'Experiment_3' (1#1) [E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.srcs/sources_1/new/Experiment_3.sv:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1433.590 ; gain = 274.219
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1433.590 ; gain = 274.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1433.590 ; gain = 274.219
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1433.590 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1491.215 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 1562.270 ; gain = 402.898
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1562.270 ; gain = 670.254
+place_ports a J15
+place_ports b L16
+place_ports c M13
+place_ports x H17
+set_property package_pin "" [get_ports [list  y]]
+set_property IOSTANDARD {default (LVCMOS33)} [get_ports [list a]]
+ERROR: [Common 17-69] Command failed: Invalid I/O Standard 'default (LVCMOS33)'. Default I/O Standard is used instead
+set_property IOSTANDARD PCI33_3 [get_ports [list b]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list b]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list a]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list c]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list x]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list y]]
+place_ports y F14
+set_property OFFCHIP_TERM NONE [get_ports [list a]]
+set_property OFFCHIP_TERM NONE [get_ports [list b]]
+set_property PULLTYPE NONE [get_ports [list a]]
+startgroup
+set_property package_pin "" [get_ports [list  x]]
+place_ports y H17
+endgroup
+place_ports x K15
+file mkdir {E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.srcs/constrs_1/new}
+close [ open {E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.srcs/constrs_1/new/Exp3_constraint.xdc} w ]
+add_files -fileset constrs_1 {{E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.srcs/constrs_1/new/Exp3_constraint.xdc}}
+set_property target_constrs_file {E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.srcs/constrs_1/new/Exp3_constraint.xdc} [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Feb  5 18:47:21 2025] Launched synth_1...
+Run output will be captured here: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Wed Feb  5 18:48:45 2025] Launched impl_1...
+Run output will be captured here: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+[Wed Feb  5 18:49:54 2025] Launched impl_1...
+Run output will be captured here: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.runs/impl_1/runme.log
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs impl_1 -jobs 2
+[Wed Feb  5 18:50:25 2025] Launched impl_1...
+Run output will be captured here: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.runs/impl_1/runme.log
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Wed Feb  5 18:50:43 2025] Launched impl_1...
+Run output will be captured here: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.runs/impl_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1697.363 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.srcs/constrs_1/new/Exp3_constraint.xdc]
+Finished Parsing XDC File [E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.srcs/constrs_1/new/Exp3_constraint.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1697.363 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Feb  5 19:14:21 2025...

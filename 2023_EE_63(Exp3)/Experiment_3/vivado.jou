@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Feb  5 18:25:12 2025
+# Process ID: 11628
+# Current directory: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7260 E:\Semester 4\DSD LAB\Experiment 2\Experiment_3\Experiment_3.xpr
+# Log file: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/vivado.log
+# Journal file: E:/Semester 4/DSD LAB/Experiment 2/Experiment_3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.xpr}
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+place_ports a J15
+place_ports b L16
+place_ports c M13
+place_ports x H17
+set_property package_pin "" [get_ports [list  y]]
+set_property IOSTANDARD {default (LVCMOS33)} [get_ports [list a]]
+set_property IOSTANDARD PCI33_3 [get_ports [list b]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list b]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list a]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list c]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list x]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list y]]
+place_ports y F14
+set_property OFFCHIP_TERM NONE [get_ports [list a]]
+set_property OFFCHIP_TERM NONE [get_ports [list b]]
+set_property PULLTYPE NONE [get_ports [list a]]
+startgroup
+set_property package_pin "" [get_ports [list  x]]
+place_ports y H17
+endgroup
+place_ports x K15
+file mkdir {E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.srcs/constrs_1/new}
+close [ open {E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.srcs/constrs_1/new/Exp3_constraint.xdc} w ]
+add_files -fileset constrs_1 {{E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.srcs/constrs_1/new/Exp3_constraint.xdc}}
+set_property target_constrs_file {E:/Semester 4/DSD LAB/Experiment 2/Experiment_3/Experiment_3.srcs/constrs_1/new/Exp3_constraint.xdc} [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+close_design
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
